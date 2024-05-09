@@ -79,23 +79,23 @@ const App = () => {
         <h1 className="text-white text-xl">Tune-Stream</h1>
         <button
           type="button"
-          /* onClick={() => setIsHomePage(!isHomePage)} */
           onClick={handleToggle}
           className="size-12 border-2 border-gray-300 rounded-full flex items-center justify-center text-white"
         >
           {isHomePage ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8 text-white"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M21 10l-9.7-9.7a.7.7 0 00-.982 0L3 10M21 10l-9.7 9.7a.7.7 0 01-.982 0L3 10M21 10H3" />
-            </svg>
+           <svg
+           xmlns="http://www.w3.org/2000/svg"
+           className="h-8 w-8 text-white"
+           viewBox="0 0 20 20"
+           fill="currentColor"
+         >
+           <path
+             fillRule="evenodd"
+             d="M9.5 15a5.5 5.5 0 113.9-1.6l4.3 4.3a1 1 0 11-1.4 1.4l-4.3-4.3A5.5 5.5 0 019.5 15zm0-9a4 4 0 100 8 4 4 0 000-8z"
+             clipRule="evenodd"
+           />
+         </svg>
+         
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
