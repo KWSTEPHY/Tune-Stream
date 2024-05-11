@@ -3,6 +3,11 @@ import axios from "axios";
 import Home from "./components/Home";
 import Page from "./components/Page";
 import { Link } from "react-router-dom";
+import Logo from "./Assets/tunestream-high-resolution-logo-white-transparent.png"
+import { VscAccount } from "react-icons/vsc";
+import { LiaSignInAltSolid } from "react-icons/lia";
+import bg from "./Assets/HBB.png"
+
 
 function generateRandomCharacter() {
     const characters = 'abcdefghijklmnopqrstuvwxyz';
@@ -75,8 +80,35 @@ const App = () => {
   }, [accessToken, searchTerm]);
   return (
     <div className="flex flex-col h-screen">
-      <nav className="bg-gray-800 p-4 flex justify-between items-center">
-        <h1 className="text-white text-xl">Tune-Stream</h1>
+      <nav className="bg-black p-4 flex justify-between items-center">
+      <img src={Logo} alt="Logo" className="h-10 w-auto" />
+        
+
+        {/* Search Input*/}
+        <div className="flex-1 flex justify-center">
+          <div className="grid place-items-center">
+            {isHomePage && (
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-96 p-4 border border-gray-300 rounded-lg"
+                style={{ display: "none" }}
+              />
+            )}
+            {!isHomePage && (
+                <input
+                type="text"
+                placeholder="Search..."
+                defaultValue={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-96 p-4 border border-gray-300 rounded-lg"
+                />
+            )}
+          </div>
+        </div>
+
         <button
           type="button"
           onClick={handleToggle}
@@ -122,57 +154,48 @@ const App = () => {
           )}
         </button>
 
-        {/* Search Input*/}
-        <div className="flex-1 flex justify-center">
-          <div className="grid place-items-center">
-            {isHomePage && (
-              <input
-                type="text"
-                placeholder="Search..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-96 p-4 border border-gray-300 rounded-lg"
-                style={{ display: "none" }}
-              />
-            )}
-            {!isHomePage && (
-                <input
-                type="text"
-                placeholder="Search..."
-                defaultValue={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-96 p-4 border border-gray-300 rounded-lg"
-                />
-            )}
-          </div>
-        </div>
-
         <div className="flex items-center">
           <Link
             to="/login"
-            className="bg-blue-400 text-slate-50 hover:bg-blue-300/90 py-1 px-2 mr-4"
-            style={{ borderRadius: "0.5rem" }}
+            className="text-white py-1 px-2 ml-3 "
+            
           >
-            Login
+            
+<VscAccount size={46} />
           </Link>
           <Link
             to="/signup"
-            className="bg-blue-400 text-slate-50 hover:bg-blue-300/90 py-1 px-2"
+            className=" text-white py-1 px-2"
             style={{ borderRadius: "0.5rem" }}
           >
-            Sign Up
+           <LiaSignInAltSolid size={55} />
           </Link>
         </div>
       </nav>
+{/* <div className="background">
+<img src={bg} alt="bg" className=" w-auto z-50" />
 
-      <div className="flex-1 bg-gray-100">
+      <div className="flex-1 relative z-10">
         {isHomePage ? (
           <Home searchResults={searchResults} />
         ) : (
           <Page searchResults={searchResults} />
         )}
       </div>
-    </div>
+    </div> */}
+    <div className="background relative" style={{ height: "100vh", overflowY: "auto" }}>
+  <img src={bg} alt="bg" className="absolute inset-0 w-full h-full object-cover z-0" />
+
+  <div className="relative z-10">
+    {isHomePage ? (
+      <Home searchResults={searchResults} />
+    ) : (
+      <Page searchResults={searchResults} />
+    )}
+  </div>
+</div>
+
+</div>
   );
 };
 
