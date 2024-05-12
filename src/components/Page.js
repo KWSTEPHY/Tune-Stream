@@ -17,6 +17,8 @@ const Page = ({ searchResults }) => {
 
     setIsPlaying(!isPlaying)
 
+    setPlaylistId(playlist_id)
+
   };
 
   return (
