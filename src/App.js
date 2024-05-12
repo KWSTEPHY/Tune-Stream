@@ -184,7 +184,7 @@ const App = () => {
       </div>
     </div> */}
     <div className="background relative" style={{ height: "100vh", overflowY: "auto", backgroundRepeat: "repeat-y", backgroundSize: "cover" }}>
-  <img src={bg} alt="bg" className="absolute inset-0 w-full h-full object-cover z-0"/>
+  <img src={bg} alt="bg" className="absolute inset-0 w-full h-full object-cover z-0" />
 
   <div className="relative z-10">
     {isHomePage ? (
