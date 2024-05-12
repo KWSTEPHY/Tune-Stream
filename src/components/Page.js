@@ -3,6 +3,7 @@ import React from "react";
 const Page = ({ searchResults }) => {
   const [isHomePage, setIsHomePage] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [playlistId, setPlaylistId] = useState("");
  
 
 
