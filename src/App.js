@@ -79,6 +79,9 @@ const App = () => {
     }
   }, [accessToken, searchTerm]);
   return (
+
+
+    
     <div className="flex flex-col h-screen">
       <nav className="bg-black p-4 flex justify-between items-center">
       <img src={Logo} alt="Logo" className="h-10 w-auto" />
@@ -183,8 +186,8 @@ const App = () => {
         )}
       </div>
     </div> */}
-    <div className="background relative" style={{ height: "100vh", overflowY: "auto", backgroundRepeat: "repeat-y", backgroundSize: "cover" }}>
-  <img src={bg} alt="bg" className="absolute inset-0 w-full h-full object-cover z-0" />
+    <div className="background relative " style={{ height: "100vh", overflowY: "auto"}}>
+  <img src={bg} alt="bg" className="absolute inset-0 w-full h-full object-cover z-0 bg-repeat-y" />
 
   <div className="relative z-10">
     {isHomePage ? (
