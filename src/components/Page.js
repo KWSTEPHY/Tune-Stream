@@ -15,6 +15,8 @@ const Page = ({ searchResults }) => {
     console.log("playlist id");
     console.log(playlist_id);
 
+    setIsPlaying(!isPlaying)
+
   };
 
   return (
