@@ -49,6 +49,7 @@ const Page = ({ searchResults }) => {
                 key={track.id}
                 className="inline-block bg-white rounded-lg shadow-lg w-64 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300"
               >
+                <button onClick={() => handlePlay("track",track?.id)}>
                 <img
                   className="h-64 w-full object-cover"
                   src={track?.album?.images[0]?.url}
@@ -61,6 +62,7 @@ const Page = ({ searchResults }) => {
                     {track.artists.map((artist) => artist.name).join(", ")}
                   </p>
                 </div>
+                </button>
               </li>
             ))}
           </ul>
@@ -92,6 +94,7 @@ const Page = ({ searchResults }) => {
                 key={album.id}
                 className="inline-block bg-white rounded-lg shadow-lg w-64 text-center transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300"
               >
+                <button onClick={() => handlePlay("album",album?.id)}>
                 <img
                   className="h-64 w-full object-cover"
                   src={album?.images[0]?.url}
@@ -100,6 +103,7 @@ const Page = ({ searchResults }) => {
                 <div className="flex-1 m-4 overflow-hidden">
                   <h3 className="text-lg font-bold">{album.name}</h3>
                 </div>
+                </button>
               </li>
             ))}
           </ul>
