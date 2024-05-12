@@ -7,9 +7,7 @@ const Page = ({ searchResults }) => {
  
 
 
-  const handleArtist = (artist_id) => {
-    console.log(artist_id);
-  };
+  
 
   const handlePlay = (category, play_id) => {
     console.log("play id");

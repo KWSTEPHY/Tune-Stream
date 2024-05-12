@@ -1,7 +1,42 @@
 import React from 'react';
 
 const Home = ({ searchResults }) => {
+
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [playId, setPlayId] = useState("");
+  const [playType, setPlayType] = useState("");
+
+  const handlePlay = (category, play_id) => {
+    console.log("play id");
+    console.log(play_id);
+
+    setIsPlaying(!isPlaying)
+
+    setPlayId(play_id)
+    setPlayType(category)
+
+  };
+
+ 
+
   return (
+
+    isPlaying ? 
+    <div>
+      <iframe
+        title="Spotify Embed: Recommendation Playlist "
+        src={`https://open.spotify.com/embed/${playType}/${playId}?utm_source=generator&theme=0`}
+        width="100%"
+        height="100%"
+        style={{ minHeight: '560px' }}
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      />
+    </div>
+    
+    :
+
+
     <div className="flex flex-col h-screen">
       {searchResults.tracks && (
         <div className="p-4">
@@ -12,6 +47,7 @@ const Home = ({ searchResults }) => {
                 key={track.id}
                 className="inline-block bg-white rounded-lg shadow-lg w-64 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300"
               >
+                <button onClick={() => handlePlay("track",track?.id)}>
                 <img
                   className="h-64 w-full object-cover"
                   src={track.album.images[0].url}
@@ -24,6 +60,7 @@ const Home = ({ searchResults }) => {
                     {track.artists.map((artist) => artist.name).join(", ")}
                   </p>
                 </div>
+                </button>
               </li>
             ))}
           </ul>
