@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Page = ({ searchResults }) => {
-  const [isHomePage, setIsHomePage] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [playlistId, setPlaylistId] = useState("");
+  const [playId, setPlayId] = useState("");
+  const [playType, setPlayType] = useState("");
  
 
 
@@ -11,13 +11,14 @@ const Page = ({ searchResults }) => {
     console.log(artist_id);
   };
 
-  const handlePlaylist = (playlist_id) => {
-    console.log("playlist id");
-    console.log(playlist_id);
+  const handlePlay = (category, play_id) => {
+    console.log("play id");
+    console.log(play_id);
 
     setIsPlaying(!isPlaying)
 
-    setPlaylistId(playlist_id)
+    setPlayId(play_id)
+    setPlayType(category)
 
   };
 
@@ -27,10 +28,10 @@ const Page = ({ searchResults }) => {
     <div>
       <iframe
         title="Spotify Embed: Recommendation Playlist "
-        src={`https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator&theme=0`}
+        src={`https://open.spotify.com/embed/${playType}/${playId}?utm_source=generator&theme=0`}
         width="100%"
         height="100%"
-        style={{ minHeight: '360px' }}
+        style={{ minHeight: '560px' }}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       />
@@ -71,7 +72,7 @@ const Page = ({ searchResults }) => {
                 key={artist.id}
                 className="inline-block bg-white rounded-lg shadow-lg w-64 text-center transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300"
               >
-                <button onClick={() => handleArtist(artist.id)}>
+                <button onClick={() => handlePlay("artist",artist.id)}>
                   <img
                     className="h-64 w-full object-cover rounded-full p-8"
                     src={artist?.images[0]?.url}
@@ -112,7 +113,7 @@ const Page = ({ searchResults }) => {
                 key={playlist.id}
                 className="inline-block bg-white rounded-lg shadow-lg text-center transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300"
               >
-                   <button onClick={() => handlePlaylist(playlist?.id)}>
+                   <button onClick={() => handlePlay("playlist",playlist?.id)}>
                 <img
                   className="h-64 w-full object-cover"
                   src={playlist?.images[0]?.url}
