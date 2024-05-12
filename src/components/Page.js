@@ -22,6 +22,12 @@ const Page = ({ searchResults }) => {
   };
 
   return (
+
+    isPlaying ? 
+    <div></div>
+    
+    :
+
     <div className="flex flex-col h-screen ">
       {searchResults.tracks && (
         <div className="p-4">
