@@ -172,18 +172,8 @@ const App = () => {
           </Link>
         </div>
       </nav>
-{/* <div className="background">
-<img src={bg} alt="bg" className=" w-auto z-50" />
 
-      <div className="flex-1 relative z-10">
-        {isHomePage ? (
-          <Home searchResults={searchResults} />
-        ) : (
-          <Page searchResults={searchResults} />
-        )}
-      </div>
-    </div> */}
-    <div className="background relative" style={{ height: "100vh", overflowY: "auto" }}>
+    <div className="background relative" style={{ height: "100vh", overflowY: "auto", backgroundRepeat: "repeat", backgroundSize: "cover"}}>
   <img src={bg} alt="bg" className="absolute inset-0 w-full h-full object-cover z-0" />
 
   <div className="relative z-10">
