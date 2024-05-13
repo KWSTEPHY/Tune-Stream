@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import Logo from "./Assets/tunestream-high-resolution-logo-white-transparent.png"
 import { VscAccount } from "react-icons/vsc";
 import { LiaSignInAltSolid } from "react-icons/lia";
-import bg from "./Assets/HBB.png"
+import bg from "./Assets/HBB.png";
+import "./App.css";
+
 
 
 function generateRandomCharacter() {
@@ -81,9 +83,9 @@ const App = () => {
   return (
 
 
-    
+
     <div className="flex flex-col h-screen">
-      <nav className="bg-black p-4 flex justify-between items-center">
+      <nav className="bg-black p-4 flex justify-between items-center z-10">
       <img src={Logo} alt="Logo" className="h-10 w-auto" />
         
 
@@ -186,8 +188,8 @@ const App = () => {
         )}
       </div>
     </div> */}
-    <div className="background relative " style={{ height: "100vh", overflowY: "auto"}}>
-  <img src={bg} alt="bg" className="absolute inset-0 w-full h-full object-cover z-0 bg-repeat-y" />
+    <div className="bg-section " >
+  <img src={bg} alt="bg" className="absolute inset-0 w-full h-screen object-cover z-0 bg-repeat-y" />
 
   <div className="relative z-10">
     {isHomePage ? (

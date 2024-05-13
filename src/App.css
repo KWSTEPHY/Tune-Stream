@@ -29,6 +29,15 @@
   color: #61dafb;
 }
 
+.bg-section {
+   max-height: 1280px;  
+   overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  z-index: 1;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
