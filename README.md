@@ -39,12 +39,12 @@ To contribute to this project you need to:
 
 
 ## Key Features
-    * Music library
-    * Artist pages
-    * Responsive design
-    * Search and filtering
-    * Social media integration
-    * API integration that enhances the functionality of the website.
+* Music library
+* Artist pages
+* Responsive design
+* Search and filtering
+* Social media integration
+* API integration that enhances the functionality of the website.
 
 
 ## Objectives
