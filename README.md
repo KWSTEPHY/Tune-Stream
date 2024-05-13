@@ -50,11 +50,11 @@ To contribute to this project you need to:
 ## Objectives
 
 The purpose of the music website is :
-    * Promote and expose artists bands and record labels.
-    * Function as a distribution platform allowing artist to distribute their music to a wide audience.
-    * Foster a sense of community among the users especially those who share similar music taste.
-    * Enables users to discover new music and artists.
-    * Integrate API for functionality : [API:https://api.spotify.com/v1/] 
+* Promote and expose artists bands and record labels.
+* Function as a distribution platform allowing artist to distribute their music to a wide audience.
+* Foster a sense of community among the users especially those who share similar music taste.
+ * Enables users to discover new music and artists.
+ * Integrate API for functionality : [API:https://api.spotify.com/v1/] 
 
 
 ## API USED
