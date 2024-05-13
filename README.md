@@ -1,12 +1,10 @@
-# Getting Started with Create React App
+# TUNESTREAM
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Single Page Application Project
 
-## Available Scripts
+TuneStream is a single page application where you can play any music from your selected artist, playlist, track or album.
 
-In the project directory, you can run:
-
-### `npm start`
+## Getting Started
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
