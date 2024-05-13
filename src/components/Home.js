@@ -91,6 +91,7 @@ const Home = ({ searchResults }) => {
                 key={album.id}
                 className="inline-block bg-white rounded-lg shadow-lg w-64 text-center transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300"
               >
+                <button onClick={() => handlePlay("album",album?.id)}>
                 <img
                   className="h-64 w-full object-cover"
                   src={album.images[0].url}
@@ -99,6 +100,7 @@ const Home = ({ searchResults }) => {
                 <div className="flex-1 m-4 overflow-hidden">
                   <h3 className="text-lg font-bold">{album.name}</h3>
                 </div>
+                </button>
               </li>
             ))}
           </ul>
