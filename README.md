@@ -5,17 +5,18 @@
 TuneStream is a single page application where you can play any music from your selected artist, playlist, track or album.
 
 ## Getting Started
+To run the project:
+1. Clone the repository
+2. Install dependencies
+3. Start the server
+4. Open the project in your browser
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The page will reload when you make changes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Live Link
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Live Link](https://facebook.github.io/create-react-app/docs/running-tests)
 
 ### `npm run build`
 
