@@ -40,7 +40,7 @@ const Home = ({ searchResults }) => {
     <div className="flex flex-col h-screen">
       {searchResults.tracks && (
         <div className="p-4">
-          <h2 className="text-2xl font-bold mb-4">Tracks</h2>
+          <h2 className="text-2xl text-white font-bold mb-4">Tracks</h2>
           <ul className="overflow-x-auto whitespace-nowrap space-x-4">
             {searchResults.tracks.items.slice(0, 15).map((track) => (
               <li
@@ -64,7 +64,7 @@ const Home = ({ searchResults }) => {
               </li>
             ))}
           </ul>
-          <h2 className="text-2xl font-bold mt-8 mb-4">Artists</h2>
+          <h2 className="text-2xl text-white font-bold mt-8 mb-4">Artists</h2>
           <ul className="overflow-x-auto whitespace-nowrap space-x-4">
             {searchResults.artists.items.map((artist) => (
               <li
@@ -84,7 +84,7 @@ const Home = ({ searchResults }) => {
               </li>
             ))}
           </ul>
-          <h2 className="text-2xl font-bold mt-8 mb-4">Albums</h2>
+          <h2 className="text-2xl text-white font-bold mt-8 mb-4">Albums</h2>
           <ul className="overflow-x-auto whitespace-nowrap space-x-4">
             {searchResults.albums.items.map((album) => (
               <li
@@ -104,7 +104,7 @@ const Home = ({ searchResults }) => {
               </li>
             ))}
           </ul>
-          <h2 className="text-2xl font-bold mt-8 mb-4 sticky top-0 h-10 z-10 bg-white/50 backdrop-blur">
+          <h2 className="text-2xl text-white font-bold mt-8 mb-4 sticky top-0 h-10 z-10 bg-white/50 backdrop-blur">
             Playlists
           </h2>
           <ul className="grid grid-cols-4 gap-4">
