@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate hook
-import bg from "../Assets/login3.png";
-import Logo from "../Assets/tunestream-high-resolution-logo-white-transparent.png"; // Import your logo
+import bg from "../Assets/HBB.png";
+import { useNavigate } from "react-router-dom";
+import Logo from "../Assets/tunestream-high-resolution-logo-white-transparent.png";
 
 function LoginPage() {
   const [formData, setFormData] = useState({
@@ -37,12 +37,12 @@ function LoginPage() {
   return (
     <>
       <section className="section">
-        <div className="flex items-center justify-center h-screen">
-          <img
+        <div className="flex items-center justify-center bg-cover h-screen bg-[#121212] bg-custom-gradient overflow-y-auto">
+          {/* <img
             src={bg}
             alt="bg"
             className="absolute inset-0 w-full h-full object-cover z-0"
-          />
+          /> */}
           <div className="w-11/12 md:w-2/3 lg:w-1/2 xl:w-1/3 bg-neutral-600 bg-opacity-60 backdrop-blur-lg shadow-lg rounded-lg overflow-hidden px-8 pt-6 pb-8 mb-4">
             <div className="text-center ml-20 mb-6">
               <img
