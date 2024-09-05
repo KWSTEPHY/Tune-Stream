@@ -21,6 +21,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+ /* For webkit-based browsers (Chrome, Safari, etc.) */
 ::-webkit-scrollbar {
-  width: 0;  /* This removes the scrollbar */
+  width: 20px; /* Reduced width of the vertical scrollbar */
+  height: 5px; /* Reduced height of the horizontal scrollbar */
 }
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #005167;
+  border-radius: 2px; /* Rounded corners for the thumb */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #005167 transparent;
+}
+
